@@ -1,5 +1,6 @@
 package tech.vermorken.contextmigration.eventpublisher
 
+import jakarta.annotation.PostConstruct
 import org.axonframework.axonserver.connector.event.axon.AxonServerEventStore
 import org.axonframework.eventhandling.GenericDomainEventMessage
 import org.axonframework.messaging.MetaData
@@ -7,7 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 import java.util.*
-import javax.annotation.PostConstruct
 
 const val AGGREGATE_TYPE = "tech.vermorken.MyAggregate"
 data class SampleEvent(val id: UUID, val someField: String, val otherField: Int)
